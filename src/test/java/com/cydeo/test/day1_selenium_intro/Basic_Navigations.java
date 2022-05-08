@@ -49,5 +49,12 @@ public class Basic_Navigations {
 
         System.out.println("Tesla page driver.getCurrentUrl() = " + driver.getCurrentUrl());
 
+        // this will closed the currently opened page
+        driver.close();
+
+        // this will close all of the pages/tabs
+        driver.quit();
+
+
     }
 }
