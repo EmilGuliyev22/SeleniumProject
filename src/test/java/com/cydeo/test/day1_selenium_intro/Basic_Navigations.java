@@ -31,10 +31,23 @@ public class Basic_Navigations {
         // navigate().forward() method is for navigating to forward from web page
         driver.navigate().forward();
 
+        Thread.sleep(3000);
+
+        // navigate().refresh() method is for refreshing the page
+        driver.navigate().refresh();
+
+        // getting title of the current page
+        System.out.println("Etsy page driver.getTitle() = " + driver.getTitle());
+
+        // getting URL of the current page
+        System.out.println("Etsy page driver.getCurrentUrl() = " + driver.getCurrentUrl());
 
 
+        driver.get("https://www.tesla.com");
 
+        System.out.println("Tesla page driver.getTitle() = " + driver.getTitle());
 
+        System.out.println("Tesla page driver.getCurrentUrl() = " + driver.getCurrentUrl());
 
     }
 }
