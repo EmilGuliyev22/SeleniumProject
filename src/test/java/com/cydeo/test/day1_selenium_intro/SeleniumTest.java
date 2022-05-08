@@ -1,4 +1,4 @@
-package com.cydeo;
+package com.cydeo.test.day1_selenium_intro;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -15,5 +15,6 @@ public class SeleniumTest {
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.google.com");
+
     }
 }
