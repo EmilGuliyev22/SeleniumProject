@@ -14,6 +14,11 @@ public class Basic_Navigations {
         // 2- Create instance of WebDriver
         WebDriver driver = new ChromeDriver();
 
+        Thread.sleep(3000);
+
+        // 3- Make our page full screen
+        driver.manage().window().maximize();
+
         driver.get("https://www.etsy.com");
 
         // navigate().to() method is for navigating to web Page
