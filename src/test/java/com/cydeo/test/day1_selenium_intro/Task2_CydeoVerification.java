@@ -23,7 +23,6 @@ public class Task2_CydeoVerification {
             System.out.println("URL verification is failed!");
         }
 
-
         String expectedTitle = "practice";
         String actualTitle = driver.getTitle();
 
