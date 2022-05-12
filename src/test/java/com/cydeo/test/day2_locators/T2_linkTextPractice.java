@@ -33,18 +33,30 @@ public class T2_linkTextPractice {
         String actualTitle = driver.getTitle();
 
         if(actualTitle.equals(expectedTitle)){
-            System.out.println("Title verification passed!");
+            System.out.println("No A/B Test Title verification passed!");
         }else{
-            System.out.println("Title verification failed!");
+            System.out.println("No A/B Test Title verification failed!");
         }
 
+        Thread.sleep(3000);
 
     //    5- Go back to home page by using the .back();
+        driver.navigate().back();
 
+        Thread.sleep(3000);
 
     //    6- Verify title equals:
    //    Expected: Practice
+        expectedTitle = "Practice";
+        actualTitle = driver.getTitle();
 
+        if(actualTitle.equals(expectedTitle)){
+            System.out.println("Practice Title verification passed!");
+        }else{
+            System.out.println("Practice Title verification failed!");
+        }
+
+        driver.quit();
 
     }
 
