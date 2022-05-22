@@ -22,7 +22,7 @@ public class T3_GoogleSearch {
         Thread.sleep(3000);
 
 //        3- Write “apple” in search box
- //       4- Click google search button
+ //       4- Press ENTER using Keys.ENTER
         WebElement searchBox = driver.findElement(By.name("q"));
         searchBox.sendKeys("apple" + Keys.ENTER);
 
