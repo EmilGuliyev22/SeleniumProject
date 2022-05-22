@@ -24,6 +24,10 @@ public class T2_getText_getAttribute {
 //        Expected: Registration form
 
         // locate headerText to get text between opening and closing tag
+
+        // Using cssSelector to go from parent to child
+        //WebElement headerText = driver.findElement(By.cssSelector("div[class='page-header']>h2"));
+
         WebElement headerText = driver.findElement(By.tagName("h2"));
 
         String expectedHeader = "Registration form";
