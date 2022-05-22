@@ -1,5 +1,6 @@
 package com.cydeo.test.day3_Css_getText_getAttribute;
 
+import com.cydeo.test.utilities.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,8 +14,10 @@ public class T2_getText_getAttribute {
 
 //        TC #2: getText() and getAttribute() method practice
 //        1- Open a chrome browser
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+//        WebDriverManager.chromedriver().setup();
+//        WebDriver driver = new ChromeDriver();
+
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
 
 //        2- Go to: https://practice.cydeo.com/registration_form
@@ -26,9 +29,9 @@ public class T2_getText_getAttribute {
         // locate headerText to get text between opening and closing tag
 
         // Using cssSelector to go from parent to child
-        //WebElement headerText = driver.findElement(By.cssSelector("div[class='page-header']>h2"));
+        WebElement headerText = driver.findElement(By.cssSelector("div[class='page-header']>h2"));
 
-        WebElement headerText = driver.findElement(By.tagName("h2"));
+        //WebElement headerText = driver.findElement(By.tagName("h2"));
 
         String expectedHeader = "Registration form";
 
