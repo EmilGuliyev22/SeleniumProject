@@ -31,18 +31,33 @@ public class T1_xpath_css_isDisplayed {
 
 
 //        b. “Forgot password” header
+         //Locate forgotPassword using cssSelector form parent to child with ">"
+        WebElement forgotPassword1 = driver.findElement(By.cssSelector("div[class='example']>h2"));
 
+        //Locate forgotPassword using cssSelector syntax2 form parent to child with ">"
+        WebElement forgotPassword2 = driver.findElement(By.cssSelector("div.example>h2"));
 
 //        c. “E-mail” text
+        WebElement emailText = driver.findElement(By.cssSelector("label[for='email']"));
 
 //        d. E-mail input box
+        WebElement emailInputBox = driver.findElement(By.cssSelector("input[name='email']"));
 
 //        e. “Retrieve password” button
-//
+        WebElement retrievePassword1 = driver.findElement(By.cssSelector("button#form_submit"));
+        WebElement retrievePassword2 = driver.findElement(By.cssSelector("button.radius"));
+
 //        f. “Powered by Cydeo text
+        WebElement poweredByCydeo = driver.findElement(By.cssSelector("div[style='text-align: center;']"));
+
 
 //        4. Verify all web elements are displayed.
-
+        System.out.println("homeLink1.isDisplayed() = " + homeLink1.isDisplayed());
+        System.out.println("forgotPassword1.isDisplayed() = " + forgotPassword1.isDisplayed());
+        System.out.println("emailText.isDisplayed() = " + emailText.isDisplayed());
+        System.out.println("emailInputBox.isDisplayed() = " + emailInputBox.isDisplayed());
+        System.out.println("retrievePassword1.isDisplayed() = " + retrievePassword1.isDisplayed());
+        System.out.println("poweredByCydeo.isDisplayed() = " + poweredByCydeo.isDisplayed());
 
     }
 }
