@@ -29,6 +29,11 @@ public class T1_xpath_css_isDisplayed {
         //Locate homeLink using cssSelector, syntax2 for class "."
         WebElement homeLink3 = driver.findElement(By.cssSelector("a.nav-link"));
 
+        //Locate homeLink using xpath with text of element
+        WebElement homeLink4 = driver.findElement(By.xpath("//a[.='Home']")); // xpath(text()='Home')
+
+        //Locate homeLink using xpath
+        WebElement homeLink5 = driver.findElement(By.xpath("//a[@class='nav-link']"));
 
 //        b. “Forgot password” header
          //Locate forgotPassword using cssSelector form parent to child with ">"
@@ -37,11 +42,22 @@ public class T1_xpath_css_isDisplayed {
         //Locate forgotPassword using cssSelector syntax2 form parent to child with ">"
         WebElement forgotPassword2 = driver.findElement(By.cssSelector("div.example>h2"));
 
+        //Locate forgotPassword using xpath
+        WebElement forgotPassword3 = driver.findElement(By.xpath("//h2[text()='Forgot Password']"));
+
+
 //        c. “E-mail” text
         WebElement emailText = driver.findElement(By.cssSelector("label[for='email']"));
 
+        //Locate Email text using xpath
+        WebElement emailText1 = driver.findElement(By.xpath("//label[@for='email']"));
+
 //        d. E-mail input box
         WebElement emailInputBox = driver.findElement(By.cssSelector("input[name='email']"));
+
+        //Locate Email input box using xpath
+        WebElement emailInputBox1 = driver.findElement(By.xpath("//input[@name='email']"));
+
 
 //        e. “Retrieve password” button
         WebElement retrievePassword1 = driver.findElement(By.cssSelector("button#form_submit"));
