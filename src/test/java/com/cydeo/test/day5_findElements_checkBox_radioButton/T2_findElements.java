@@ -16,7 +16,7 @@ public class T2_findElements {
         driver.manage().window().maximize();
 
         //Providing extra time for our driver before it throws NoSuchElementException
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 //        2- Go to: https://practice.cydeo.com/abtest
          driver.get("https://practice.cydeo.com/abtest");
