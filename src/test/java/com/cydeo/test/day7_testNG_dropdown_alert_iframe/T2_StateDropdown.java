@@ -74,12 +74,12 @@ public class T2_StateDropdown {
         // isMultiple() will return true, if dropdown has multiselect option
        // System.out.println("languages.isMultiple() = " + languages.isMultiple());
 
-        Thread.sleep(3000);
-        languages.selectByValue("java");
-        Thread.sleep(3000);
-        languages.selectByVisibleText("C#");
-        Thread.sleep(3000);
-        languages.selectByIndex(3);
+//        Thread.sleep(3000);
+//        languages.selectByValue("java");
+//        Thread.sleep(3000);
+//        languages.selectByVisibleText("C#");
+//        Thread.sleep(3000);
+//        languages.selectByIndex(3);
 
         //        4. Print out all selected values.
         // getOptions() method will return to all options in dropdown
@@ -95,6 +95,11 @@ public class T2_StateDropdown {
 
 
 //        5. Deselect all values.
+        Thread.sleep(3000);
+        languages.deselectAll();
+
+
+
     }
 
 
