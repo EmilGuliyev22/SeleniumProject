@@ -5,6 +5,7 @@ import com.google.common.base.Verify;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -35,15 +36,17 @@ public class T2_StateDropdown {
         Select stateDropdown = new Select(driver.findElement(By.id("state")));
 
         //        3. Select Illinois with selectByValue()
-        //Thread.sleep(3000);
+        Thread.sleep(3000);
         stateDropdown.selectByValue("IL");
 
 
 //        4. Select Virginia with selectByVisibleText()
+        Thread.sleep(3000);
         stateDropdown.selectByVisibleText("Virginia");
 
 
 //        5. Select California with selectByIndex()
+        Thread.sleep(3000);
         stateDropdown.selectByIndex(5);
 
 
@@ -52,6 +55,10 @@ public class T2_StateDropdown {
         // getFirstSelectedOption() method will return to current selected option
         String actualStateOption = stateDropdown.getFirstSelectedOption().getText();
         String expectedStateOption = "California";
+
+        Assert.assertEquals(actualStateOption,expectedStateOption,"Selected option verification is failed!");
+
+        //Assert.assertEquals(stateDropdown.getFirstSelectedOption().getText(), "California","Selected option verification is failed!");
 
     }
 }
