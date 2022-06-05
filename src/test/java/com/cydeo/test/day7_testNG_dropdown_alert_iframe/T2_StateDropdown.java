@@ -72,27 +72,17 @@ public class T2_StateDropdown {
         Select languages = new Select(driver.findElement(By.xpath("//select[@name='Languages']")));
 
         // isMultiple() will return true, if dropdown has multiselect option
-       // System.out.println("languages.isMultiple() = " + languages.isMultiple());
-
-//        Thread.sleep(3000);
-//        languages.selectByValue("java");
-//        Thread.sleep(3000);
-//        languages.selectByVisibleText("C#");
-//        Thread.sleep(3000);
-//        languages.selectByIndex(3);
+        System.out.println("languages.isMultiple() = " + languages.isMultiple());
 
         //        4. Print out all selected values.
         // getOptions() method will return to all options in dropdown
+       // List<WebElement> allOptions = languages.getOptions();
 
-        List<WebElement> allOptions = languages.getOptions();
-
-        for(WebElement each: allOptions){
+        for(WebElement each: languages.getOptions()){
             each.click();
             Thread.sleep(3000);
             System.out.println("each.getText() = " + each.getText());
         }
-
-
 
 //        5. Deselect all values.
         Thread.sleep(3000);
