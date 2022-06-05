@@ -4,11 +4,13 @@ import com.cydeo.test.utilities.WebDriverFactory;
 import com.google.common.base.Verify;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class T2_StateDropdown {
@@ -34,6 +36,7 @@ public class T2_StateDropdown {
     public void stateDropdownTest() throws InterruptedException {
 
         Select stateDropdown = new Select(driver.findElement(By.id("state")));
+        System.out.println("stateDropdown.isMultiple() = " + stateDropdown.isMultiple());
 
         //        3. Select Illinois with selectByValue()
         Thread.sleep(3000);
@@ -61,4 +64,40 @@ public class T2_StateDropdown {
         //Assert.assertEquals(stateDropdown.getFirstSelectedOption().getText(), "California","Selected option verification is failed!");
 
     }
+
+    @Test
+    public void multiSelectDropdowntest() throws InterruptedException {
+
+//        3. Select all the options from multiple select dropdown.
+        Select languages = new Select(driver.findElement(By.xpath("//select[@name='Languages']")));
+
+        // isMultiple() will return true, if dropdown has multiselect option
+       // System.out.println("languages.isMultiple() = " + languages.isMultiple());
+
+        Thread.sleep(3000);
+        languages.selectByValue("java");
+        Thread.sleep(3000);
+        languages.selectByVisibleText("C#");
+        Thread.sleep(3000);
+        languages.selectByIndex(3);
+
+        //        4. Print out all selected values.
+        // getOptions() method will return to all options in dropdown
+
+        List<WebElement> allOptions = languages.getOptions();
+
+        for(WebElement each: allOptions){
+            each.click();
+            Thread.sleep(3000);
+            System.out.println("each.getText() = " + each.getText());
+        }
+
+
+
+//        5. Deselect all values.
+    }
+
+
+
+
 }
