@@ -1,7 +1,7 @@
 package com.cydeo.test.day7_testNG_dropdown_alert_iframe;
 
 import com.cydeo.test.utilities.WebDriverFactory;
-import com.google.common.base.Verify;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
