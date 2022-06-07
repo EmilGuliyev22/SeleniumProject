@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class T2_StateDropdown {
@@ -75,7 +76,7 @@ public class T2_StateDropdown {
 
         //        4. Print out all selected values.
         // getOptions() method will return to all options in dropdown
-       // List<WebElement> allOptions = languages.getOptions();
+      List<WebElement> allOptions = languages.getOptions();
 
         for(WebElement each: languages.getOptions()){
             each.click();
