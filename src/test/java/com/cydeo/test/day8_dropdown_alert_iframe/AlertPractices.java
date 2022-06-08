@@ -13,6 +13,9 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.testng.Assert.*;
+
+
 public class AlertPractices {
 
     WebDriver driver;
@@ -46,21 +49,49 @@ public class AlertPractices {
 
         Thread.sleep(3000);
 
-        // for clicking cansel button in JS alert we are using dismiss() method
+        // for clicking cancel button in JS alert we are using dismiss() method
         //alert.dismiss();
 
 //        5. Verify “You clicked: Ok” text is displayed.
         WebElement resultText = driver.findElement(By.id("result"));
-        Assert.assertTrue(resultText.isDisplayed(),"result text did not appear!");
+        assertTrue(resultText.isDisplayed(),"result text did not appear!");
 
         String actualText = resultText.getText();
         String expectedText = "You clicked: Ok";
-        Assert.assertEquals(actualText,expectedText,"result text did not appear correctly!");
+        assertEquals(actualText,expectedText,"result text did not appear correctly!");
 
 
         //Assert.assertEquals(resultText.getText(),"You clicked: Ok");
 
     }
+
+    @Test
+    public void promptAlerttest() throws InterruptedException {
+
+//        3. Click to “Click for JS Prompt” button
+         WebElement jsPrompt = driver.findElement(By.xpath("//button[.='Click for JS Prompt']"));
+         jsPrompt.click();
+
+//        4. Send “hello” text to alert
+         Alert alert = driver.switchTo().alert();
+         alert.sendKeys("hello");
+
+         Thread.sleep(3000);
+//        5. Click to OK button from the alert
+          alert.accept();
+        Thread.sleep(3000);
+//        6. Verify “You entered: hello” text is displayed.
+        WebElement resultText = driver.findElement(By.id("result"));
+        assertTrue(resultText.isDisplayed(),"result text did not appear!");
+
+        String actualText = resultText.getText();
+        String expectedText = "You entered: hello";
+        assertEquals(actualText,expectedText,"result text did not appear correctly!");
+
+    }
+
+
+
 
     @AfterMethod
     public void tearDownMethod(){
