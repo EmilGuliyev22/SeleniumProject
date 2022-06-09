@@ -9,12 +9,11 @@ import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
-    WebDriver driver;
+    public WebDriver driver;
 
     @BeforeMethod
     public void setUpMethod(){
 //        1. Open Chrome browser
-//        2. Go to http://practice.cybertekschool.com/dropdown
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         //Providing extra time for our driver before it throws NoSuchElementException
