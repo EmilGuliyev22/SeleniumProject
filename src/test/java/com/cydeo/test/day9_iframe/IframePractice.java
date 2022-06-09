@@ -35,7 +35,7 @@ public class IframePractice extends TestBase {
           WebElement commentBody = driver.findElement(By.id("tinymce"));
           // clear() method delete text form comment body.
           commentBody.clear();
-          Thread.sleep(3000);
+          //Thread.sleep(3000);
 
 //          4- Type "Hello World" in comment body
           commentBody.sendKeys("Hello World");
@@ -43,14 +43,20 @@ public class IframePractice extends TestBase {
 //          5- Verify "Hello World" text is written in comment body
          assertEquals(commentBody.getText(),"Hello World");
 
-
+         // if you have nested frame and if you want to swith 1 frame to direct parent of this frame we are using parentFrame() method
          driver.switchTo().parentFrame();
 
+         // defaultContent() method will switch to main HTML (Parent of all HTML)
          //driver.switchTo().defaultContent();
 
 //          6- Verify header "An iFrame containing the TinyMCE WYSIWYG Editor" is displayed
           WebElement headerText = driver.findElement(By.tagName("h3"));
          assertTrue(headerText.isDisplayed(),"Header text did not appear!");
+
+         String actualHeader = headerText.getText();
+         String expectedHeader = "An iFrame containing the TinyMCE WYSIWYG Editor";
+
+         assertEquals(actualHeader,expectedHeader,"Header text did not appear correctly!");
 
       }
 }
