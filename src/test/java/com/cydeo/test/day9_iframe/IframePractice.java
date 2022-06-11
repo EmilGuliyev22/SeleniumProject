@@ -43,7 +43,7 @@ public class IframePractice extends TestBase {
 //          5- Verify "Hello World" text is written in comment body
          assertEquals(commentBody.getText(),"Hello World");
 
-         // if you have nested frame and if you want to swith 1 frame to direct parent of this frame we are using parentFrame() method
+         // if you have nested frame and if you want to switch 1 frame to direct parent of this frame we are using parentFrame() method
          driver.switchTo().parentFrame();
 
          // defaultContent() method will switch to main HTML (Parent of all HTML)
