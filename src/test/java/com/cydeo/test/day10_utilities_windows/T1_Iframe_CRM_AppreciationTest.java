@@ -28,9 +28,17 @@ public class T1_Iframe_CRM_AppreciationTest extends TestBase {
           WebElement moreBtn = driver.findElement(By.xpath("//span[contains(@id,'link-text')]"));// cssSelector: span[id*='link-text']
           moreBtn.click();
 
-
+          WebElement appreciation = driver.findElement(By.xpath("//span[.='Appreciation']"));
+          appreciation.click();
 
 //        5- Write an Appreciation message
+          driver.switchTo().frame(driver.findElement(By.cssSelector(".bx-editor-iframe")));
+          driver.findElement(By.tagName("body")).sendKeys("Hello!");
+
+
+
+
+
 
 //        6- Click the SEND button
 
