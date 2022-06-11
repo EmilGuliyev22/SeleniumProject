@@ -3,6 +3,7 @@ package com.cydeo.test.day10_utilities_windows;
 import com.cydeo.test.base.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class T1_Iframe_CRM_AppreciationTest extends TestBase {
@@ -44,7 +45,10 @@ public class T1_Iframe_CRM_AppreciationTest extends TestBase {
         sendBtn.click();
 
 //        7- Verify the Appreciation message is displayed on the feed
-
+        WebElement feedText = driver.findElement(By.xpath("//div[starts-with(@id,'blog_post_body')]"));
+        String actualText = feedText.getText();
+        String expectedText = "Hello!";
+        Assert.assertEquals(actualText,expectedText,"Feed message did not appear correctly!");
 
 
     }
