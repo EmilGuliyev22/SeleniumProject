@@ -35,14 +35,17 @@ public class T1_Iframe_CRM_AppreciationTest extends TestBase {
           driver.switchTo().frame(driver.findElement(By.cssSelector(".bx-editor-iframe")));
           driver.findElement(By.tagName("body")).sendKeys("Hello!");
 
-
-
-
-
-
 //        6- Click the SEND button
 
+       // if you have nested frame and if you want to switch 1 frame to direct parent of this frame we are using parentFrame() method
+       // driver.switchTo().parentFrame()
+        driver.switchTo().defaultContent(); // just use this method if you want to go main HTML
+       WebElement sendBtn = driver.findElement(By.id("blog-submit-button-save"));
+        sendBtn.click();
+
 //        7- Verify the Appreciation message is displayed on the feed
+
+
 
     }
 }
