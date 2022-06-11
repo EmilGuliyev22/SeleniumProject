@@ -25,6 +25,8 @@ public class T1_Iframe_CRM_AppreciationTest extends TestBase {
 
 
 //        4- Click the MORE tab and select APPRECIATION
+          WebElement moreBtn = driver.findElement(By.xpath("//span[contains(@id,'link-text')]"));// cssSelector: span[id*='link-text']
+          moreBtn.click();
 
 
 
