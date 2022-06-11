@@ -56,7 +56,7 @@ public class T2_CRM_LOGIN extends TestBase {
         driver.get("https://login1.nextbasecrm.com/");
 
         //Calling my utility method to login helpdesk
-        CRM_Utilities.crm_login(driver, "helpdesk2@cybertekschool.com", "UserUser" );
+        CRM_Utilities.crm_login(driver, "hr3@cybertekschool.com", "UserUser" );
 
 
     }

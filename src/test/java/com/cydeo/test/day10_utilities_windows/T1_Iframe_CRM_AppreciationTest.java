@@ -15,17 +15,17 @@ public class T1_Iframe_CRM_AppreciationTest extends TestBase {
 //        2- Go to: https://login2.nextbasecrm.com/
         driver.get("https://login2.nextbasecrm.com/");
         //CRM_Utilities.crm_login(driver);
-        CRM_Utilities.crm_login(driver,"hr1@cydeo.com","UserUser");
+        //CRM_Utilities.crm_login(driver,"hr1@cydeo.com","UserUser");
 
-//        3- Login Homepage ( Login with valid username:helpdesk1@cybertekschool.com and password:UserUser)
-//        WebElement username = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
-//        username.sendKeys("helpdesk1@cybertekschool.com");
-//
-//        WebElement password = driver.findElement(By.xpath("//input[@name='USER_PASSWORD']"));
-//        password.sendKeys("UserUser");
-//
-//        WebElement loginBtn = driver.findElement(By.xpath("//input[@class='login-btn']"));
-//        loginBtn.click();
+        //3- Login Homepage ( Login with valid username:helpdesk1@cybertekschool.com and password:UserUser)
+        WebElement username = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
+        username.sendKeys("helpdesk1@cybertekschool.com");
+
+        WebElement password = driver.findElement(By.xpath("//input[@name='USER_PASSWORD']"));
+        password.sendKeys("UserUser");
+
+        WebElement loginBtn = driver.findElement(By.xpath("//input[@class='login-btn']"));
+        loginBtn.click();
 
 
 //        4- Click the MORE tab and select APPRECIATION
