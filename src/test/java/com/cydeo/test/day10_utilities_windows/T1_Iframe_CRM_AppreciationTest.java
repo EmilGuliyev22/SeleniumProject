@@ -1,6 +1,7 @@
 package com.cydeo.test.day10_utilities_windows;
 
 import com.cydeo.test.base.TestBase;
+import com.cydeo.test.utilities.CRM_Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -13,16 +14,18 @@ public class T1_Iframe_CRM_AppreciationTest extends TestBase {
 
 //        2- Go to: https://login2.nextbasecrm.com/
         driver.get("https://login2.nextbasecrm.com/");
+        //CRM_Utilities.crm_login(driver);
+        CRM_Utilities.crm_login(driver,"hr1@cydeo.com","UserUser");
 
 //        3- Login Homepage ( Login with valid username:helpdesk1@cybertekschool.com and password:UserUser)
-        WebElement username = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
-        username.sendKeys("helpdesk1@cybertekschool.com");
-
-        WebElement password = driver.findElement(By.xpath("//input[@name='USER_PASSWORD']"));
-        password.sendKeys("UserUser");
-
-        WebElement loginBtn = driver.findElement(By.xpath("//input[@class='login-btn']"));
-        loginBtn.click();
+//        WebElement username = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
+//        username.sendKeys("helpdesk1@cybertekschool.com");
+//
+//        WebElement password = driver.findElement(By.xpath("//input[@name='USER_PASSWORD']"));
+//        password.sendKeys("UserUser");
+//
+//        WebElement loginBtn = driver.findElement(By.xpath("//input[@class='login-btn']"));
+//        loginBtn.click();
 
 
 //        4- Click the MORE tab and select APPRECIATION
