@@ -30,6 +30,11 @@ public class T2_WebtablePractice extends TestBase {
         WebElement bobMartinDateCell =
                 driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']//following-sibling::td[3]"));
 
+        String actualBobMartinDateCell = bobMartinDateCell.getText();
+        String expectedBobMartinDateCell = "12/31/2021";
+
+        Assert.assertEquals(actualBobMartinDateCell,expectedBobMartinDateCell);
+
     }
 
 
