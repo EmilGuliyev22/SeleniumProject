@@ -1,6 +1,7 @@
 package com.cydeo.test.day11_webtables_utilities;
 
 import com.cydeo.test.base.TestBase;
+import com.cydeo.test.utilities.BrowserUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -39,6 +40,8 @@ public class T1_Multiple_Windows extends TestBase {
         String actualTitle = driver.getTitle();
         String expectedTitle = "Etsy";
         Assert.assertTrue(actualTitle.contains(expectedTitle),"Title verification failed!");
+
+       // BrowserUtils.switchWindowAndVerify(driver,"etsy","Etsy");
 
 
     }
