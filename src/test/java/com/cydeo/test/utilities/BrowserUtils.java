@@ -37,9 +37,7 @@ public class BrowserUtils {
         String actualTitle = driver.getTitle();
 
         Assert.assertTrue(actualTitle.contains(expectedTitle),"Title verification failed!");
-
     }
-
 
      public static void verifyTitle(WebDriver driver,String expectedTitle){
 
