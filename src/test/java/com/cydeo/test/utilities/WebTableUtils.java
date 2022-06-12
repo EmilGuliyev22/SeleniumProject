@@ -1,6 +1,8 @@
 package com.cydeo.test.utilities;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class WebTableUtils {
 
@@ -12,9 +14,10 @@ public class WebTableUtils {
     //This method should accept a costumerName and return the costumer order date
     //as a String.
 
-      public static String returnOrderDate(WebDriver driver,String costumerName){
-
-
+      public static String returnOrderDate(WebDriver driver,String customerName){
+       String locator ="//td[.='" + customerName + "']//following-sibling::td[.='12/31/2021']";
+          WebElement customerDateCell = driver.findElement(By.xpath(locator));
+          return customerDateCell.getText();
       }
 
 }
