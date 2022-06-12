@@ -37,12 +37,15 @@ public class T1_Multiple_Windows extends TestBase {
         }
 
 //        5. Assert:Title contains “Etsy”
-        String actualTitle = driver.getTitle();
-        String expectedTitle = "Etsy";
-        Assert.assertTrue(actualTitle.contains(expectedTitle),"Title verification failed!");
+//        String actualTitle = driver.getTitle();
+//        String expectedTitle = "Etsy";
+//        Assert.assertTrue(actualTitle.contains(expectedTitle),"Title verification failed!");
+//
 
-       // BrowserUtils.switchWindowAndVerify(driver,"etsy","Etsy");
-
-
+        //BrowserUtils.switchWindowAndVerify(driver,"amazon","Amazon");
     }
+
+
+
+
 }
