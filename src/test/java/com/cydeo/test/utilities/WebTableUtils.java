@@ -15,9 +15,18 @@ public class WebTableUtils {
     //as a String.
 
       public static String returnOrderDate(WebDriver driver,String customerName){
-       String locator ="//td[.='" + customerName + "']//following-sibling::td[.='12/31/2021']";
+       String locator ="//td[.='" + customerName + "']//following-sibling::td[3]";
+
           WebElement customerDateCell = driver.findElement(By.xpath(locator));
           return customerDateCell.getText();
       }
+
+    public static String returnOrderDate2(WebDriver driver,String customerName){
+        return driver.findElement(By.xpath("//td[.='" + customerName + "']//following-sibling::td[3]")).getText();
+    }
+
+
+
+
 
 }
