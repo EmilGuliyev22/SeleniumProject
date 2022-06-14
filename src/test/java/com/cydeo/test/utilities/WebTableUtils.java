@@ -26,6 +26,16 @@ public class WebTableUtils {
     }
 
 
+    //Method #2 info:
+    //• Name: orderVerify ()
+    //• Return type: void
+    //• Arg1: WebDriver driver
+    //• Arg2: String customerName
+    //• Arg3: String expectedOrderDate
+    //This method should accept above-mentioned arguments and internally assert
+    //expectedOrderDate matching actualOrderDate.
+
+
 
 
 
