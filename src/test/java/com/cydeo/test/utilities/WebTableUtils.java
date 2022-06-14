@@ -3,6 +3,7 @@ package com.cydeo.test.utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class WebTableUtils {
 
@@ -21,9 +22,9 @@ public class WebTableUtils {
           return customerDateCell.getText();
       }
 
-    public static String returnOrderDate2(WebDriver driver,String customerName){
-        return driver.findElement(By.xpath("//td[.='" + customerName + "']//following-sibling::td[3]")).getText();
-    }
+//    public static String returnOrderDate2(WebDriver driver,String customerName){
+//        return driver.findElement(By.xpath("//td[.='" + customerName + "']//following-sibling::td[3]")).getText();
+//    }
 
 
     //Method #2 info:
@@ -35,6 +36,15 @@ public class WebTableUtils {
     //This method should accept above-mentioned arguments and internally assert
     //expectedOrderDate matching actualOrderDate.
 
+    public static void orderVerify(WebDriver driver,String customerName,String expectedOrderDate){
+
+        String locator ="//td[.='" + customerName + "']//following-sibling::td[3]";
+
+        WebElement customerDateCell = driver.findElement(By.xpath(locator));
+
+        Assert.assertEquals(customerDateCell.getText(),expectedOrderDate);
+
+    }
 
 
 
