@@ -46,6 +46,9 @@ public class T2_WebtablePractice extends TestBase {
         String customerOrderDate1 = WebTableUtils.returnOrderDate(driver,"Alexandra Gray");
         System.out.println("customerOrderDate1 = " + customerOrderDate1);
 
+        System.out.println("WebTableUtils.returnOrderDate(driver,\"Alexandra Gray\") = " + WebTableUtils.returnOrderDate(driver, "Alexandra Gray"));
+
+
         String customerOrderDate2 = WebTableUtils.returnOrderDate(driver,"Ned Stark");
         System.out.println("customerOrderDate2 = " + customerOrderDate2);
 
