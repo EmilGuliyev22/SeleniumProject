@@ -6,6 +6,8 @@ public class LearningProperties {
 
     @Test
     public void java_properties_reading_test(){
+        // key=value
+        System.out.println("System.getProperty(\"os.name\") = " + System.getProperty("os.name"));
 
 
     }
