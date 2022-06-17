@@ -2,6 +2,7 @@ package com.cydeo.test.day13_configuration_reader;
 
 import com.cydeo.test.base.TestBase;
 import com.cydeo.test.utilities.BrowserUtils;
+import com.cydeo.test.utilities.ConfigurationReader;
 import com.google.common.base.Verify;
 import org.apache.commons.logging.Log;
 import org.openqa.selenium.By;
@@ -14,15 +15,20 @@ public class T1_Config_Practice extends TestBase {
     @Test
     public void login_crm_app(){
 //        2. Go to : https://login1.nextbasecrm.com/
-        driver.get("https://login2.nextbasecrm.com/");
+        //driver.get("https://login2.nextbasecrm.com/");
+        driver.get(ConfigurationReader.getProperty("env"));
 
 //        3. Enter valid username
         WebElement inputUsername = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
-        inputUsername.sendKeys("helpdesk1@cybertekschool.com");
+        //inputUsername.sendKeys("hr1@cydeo.com");
+        inputUsername.sendKeys(ConfigurationReader.getProperty("username"));
+
 
 //        4. Enter valid password
         WebElement inputPassword = driver.findElement(By.xpath("//input[@name='USER_PASSWORD']"));
-        inputPassword.sendKeys("UserUser");
+        //inputPassword.sendKeys("UserUser");
+        inputPassword.sendKeys(ConfigurationReader.getProperty("password"));
+
 
 //        5. Click to Log In button
         WebElement loginButton = driver.findElement(By.xpath("//input[@value='Log In']"));
