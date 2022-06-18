@@ -36,7 +36,7 @@ public class T1_Config_Practice extends TestBase {
 
 //        6. Verify title is as expected:
 //        Expected: Portal
-     BrowserUtils.verifyTitle(driver,"(1) Portal");
+    // BrowserUtils.verifyTitle(driver,"(1) Portal");
 
     }
 }
