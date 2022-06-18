@@ -48,6 +48,13 @@ public class Driver {
 
         return driver;
 
+    }
+
+    public static void closeDriver(){
+        if(driver != null){
+            driver.quit(); // this line will termonate the existing driver session. with using this driver will not be even null
+            driver = null;
+        }
 
     }
 }
