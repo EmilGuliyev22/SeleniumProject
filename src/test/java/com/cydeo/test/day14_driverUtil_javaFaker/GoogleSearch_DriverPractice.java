@@ -15,6 +15,7 @@ public class GoogleSearch_DriverPractice {
     @Test
     public void google_search_driver_practice(){
 
+        
         // Go to "https://www.google.com/"
         Driver.getDriver().get(ConfigurationReader.getProperty("google.url"));
         System.out.println("((RemoteWebDriver) Driver.getDriver()).getSessionId() = " + ((RemoteWebDriver) Driver.getDriver()).getSessionId());
