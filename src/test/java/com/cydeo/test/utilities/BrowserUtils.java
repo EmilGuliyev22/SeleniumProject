@@ -6,7 +6,7 @@ import org.testng.Assert;
 import java.util.Set;
 
 public class BrowserUtils {
-    WebDriver driver = Driver.getDriver();
+
 
 //    TC : Create utility method
 //   1. Create a new class called BrowserUtils

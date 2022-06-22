@@ -16,7 +16,7 @@ public class T1_JavaFaker_Registration_Form {
         //    Note: Use JavaFaker OR read from configuration.properties file when possible.
 //    1. Open browser
 //    2. Go to website: https://practice.cydeo.com/registration_form
-     // driver.get("https://practice.cydeo.com/registration_form");
+      //driver.get("https://practice.cydeo.com/registration_form");
         Driver.getDriver().get(ConfigurationReader.getProperty("registration.form.url"));
 
         Faker faker = new Faker();
