@@ -41,5 +41,7 @@ public class T2_Guru99_Upload_Test {
         Thread.sleep(3000);
         Assert.assertEquals(actualResultMsg,expectedResultMsg,"Result message verification failed!");
 
+        Driver.closeDriver();
+
     }
 }
