@@ -24,6 +24,11 @@ public class T1_Guru99_DragandDrop_Test {
         actions.dragAndDrop(bank,debitAccount).perform();
 
 //    4- Drag “5000” and drop into Amount area under Debit Side
+       WebElement fiveK = Driver.getDriver().findElement(By.linkText("5000"));
+       WebElement debitAmount = Driver.getDriver().findElement(By.id("amt7"));
+
+       actions.dragAndDrop(fiveK,debitAmount).perform();
+
 
 
 //    5- Drag “SALES” and drop into Account area under Credit Side
