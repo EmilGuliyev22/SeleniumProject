@@ -30,7 +30,7 @@ public class T2_Guru99_Upload_Test {
 //    4. Click Submit File button
         WebElement submitBtn = Driver.getDriver().findElement(By.id("submitbutton"));
         submitBtn.click();
-
+        Thread.sleep(3000);
 
 //    5. Verify expected message appeared.
 //    Expected: “1 file
