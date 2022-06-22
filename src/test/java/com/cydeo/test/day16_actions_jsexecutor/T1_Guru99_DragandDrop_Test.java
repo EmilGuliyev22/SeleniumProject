@@ -4,6 +4,7 @@ import com.cydeo.test.utilities.ConfigurationReader;
 import com.cydeo.test.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class T1_Guru99_DragandDrop_Test {
@@ -18,6 +19,9 @@ public class T1_Guru99_DragandDrop_Test {
 //    3- Drag “BANK” and drop into Account area under Debit Side
         WebElement bank = Driver.getDriver().findElement(By.partialLinkText("BANK"));
         WebElement debitAccount = Driver.getDriver().findElement(By.id("bank"));
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.dragAndDrop(bank,debitAccount).perform();
 
 //    4- Drag “5000” and drop into Amount area under Debit Side
 
