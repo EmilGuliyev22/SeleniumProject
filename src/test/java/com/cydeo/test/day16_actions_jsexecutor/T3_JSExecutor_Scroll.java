@@ -1,6 +1,11 @@
 package com.cydeo.test.day16_actions_jsexecutor;
 
+import com.cydeo.test.utilities.ConfigurationReader;
+import com.cydeo.test.utilities.Driver;
 import com.google.common.base.Verify;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class T3_JSExecutor_Scroll {
@@ -9,8 +14,15 @@ public class T3_JSExecutor_Scroll {
     public void etsy_scroll_test(){
 
 //         Goto Etsy homepage
+        Driver.getDriver().get(ConfigurationReader.getProperty("etsy.url"));
 
 //         Scroll down
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        // window.scrollBy(x, y)  ; x(right or left) stands for horizontal line and y stands for vertical line(up or down)
+       // js.executeScript("window.scrollBy(0, 5000)");
+
+        WebElement email = Driver.getDriver().findElement(By.id("email-list-signup-email-input"));
+        js.executeScript("arguments[0].scrollIntoView(true)",email);
 
 //         Generate random email and enter into subscribe box
 
