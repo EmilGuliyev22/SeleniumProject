@@ -5,6 +5,7 @@ import com.google.common.base.Verify;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class T1_ActionsPractice {
@@ -32,7 +33,11 @@ public class T1_ActionsPractice {
                 .release().perform();
 
 
-
 //        6. Verify “You did great!” text appears on big circle
+        //Assert.assertTrue(bigCircle.isDisplayed());
+
+        Assert.assertEquals(bigCircle.getText(),"You did great!");
+
+
     }
 }
