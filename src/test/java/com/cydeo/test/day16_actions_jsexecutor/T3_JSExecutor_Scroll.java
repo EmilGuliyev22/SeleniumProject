@@ -27,6 +27,8 @@ public class T3_JSExecutor_Scroll {
         WebElement email = Driver.getDriver().findElement(By.id("email-list-signup-email-input"));
         js.executeScript("arguments[0].scrollIntoView(true)",email);
 
+
+
 //         Generate random email and enter into subscribe box
         //         Click on Subscribe
         Faker faker = new Faker();
