@@ -12,14 +12,14 @@ import org.testng.annotations.Test;
 public class POM_ActionsPractices {
 
     CydeoPracticePage cydeoPracticePage;
-    Actions actions;
+    Actions actions ;
 
     @BeforeMethod
     public void setUpMethod(){
 
         Driver.getDriver().get("https://practice.cydeo.com/drag_and_drop_circles");
-        cydeoPracticePage = new CydeoPracticePage();
-        actions = new Actions(Driver.getDriver());
+      cydeoPracticePage = new CydeoPracticePage();
+      actions = new Actions(Driver.getDriver());
     }
 
     @Test

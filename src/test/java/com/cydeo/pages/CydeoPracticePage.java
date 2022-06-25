@@ -23,7 +23,7 @@ public class CydeoPracticePage {
        // initElements accept 2 arguments ,
        // WebDriver instance and Page class instance (this) means current instance of this class.
 
-       PageFactory.initElements(Driver.getDriver(),this);
+      PageFactory.initElements(Driver.getDriver(),this);
 
    }
 
