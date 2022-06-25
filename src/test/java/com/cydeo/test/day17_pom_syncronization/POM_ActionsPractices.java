@@ -6,18 +6,27 @@ import com.google.common.base.Verify;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class POM_ActionsPractices {
+
+    CydeoPracticePage cydeoPracticePage;
+    Actions actions;
+
+    @BeforeMethod
+    public void setUpMethod(){
+
+        Driver.getDriver().get("https://practice.cydeo.com/drag_and_drop_circles");
+        cydeoPracticePage = new CydeoPracticePage();
+        actions = new Actions(Driver.getDriver());
+    }
 
     @Test
     public void drag_small_circle_text(){
 //        1. Open a chrome browser
 //        2. Go to:
 //        https://practice.cydeo.com/drag_and_drop_circles
-        Driver.getDriver().get("https://practice.cydeo.com/drag_and_drop_circles");
-
-        CydeoPracticePage cydeoPracticePage = new CydeoPracticePage();
 
 //        3. Verify expected default text appears on big circle
 //                Expected = "Drag the small circle here."
@@ -33,12 +42,10 @@ public class POM_ActionsPractices {
 //        1. Open a chrome browser
 //        2.  Go to:
 //        https://practice.cydeo.com/drag_and_drop_circles
-         Driver.getDriver().get("https://practice.cydeo.com/drag_and_drop_circles");
 
-         CydeoPracticePage cydeoPracticePage = new CydeoPracticePage();
 
 //        3. Click and hold small circle
-          Actions actions = new Actions(Driver.getDriver());
+
            actions.moveToElement(cydeoPracticePage.smallCircle)
                                                   .clickAndHold().pause(2000)
                                                   .moveByOffset(200,100)
