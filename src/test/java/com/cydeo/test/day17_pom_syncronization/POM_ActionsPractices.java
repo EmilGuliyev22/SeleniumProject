@@ -35,9 +35,20 @@ public class POM_ActionsPractices {
 //        https://practice.cydeo.com/drag_and_drop_circles
          Driver.getDriver().get("https://practice.cydeo.com/drag_and_drop_circles");
 
+         CydeoPracticePage cydeoPracticePage = new CydeoPracticePage();
+
 //        3. Click and hold small circle
           Actions actions = new Actions(Driver.getDriver());
+           actions.moveToElement(cydeoPracticePage.smallCircle)
+                                                  .clickAndHold().pause(2000)
+                                                  .moveByOffset(200,100)
+                                                  .pause(2000)
+                                                  .perform();
+
 
 //        4. Verify "Drop here." text appears on big circle
+        Assert.assertEquals(cydeoPracticePage.bigCircle.getText(),"Drop here.");
+
+
     }
 }
