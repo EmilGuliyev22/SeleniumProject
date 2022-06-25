@@ -16,6 +16,13 @@ public class CydeoPracticePage {
 
    public CydeoPracticePage(){
 
+       // PageFactory is a selenium class that support Page Object Model
+       // and it has method called initElements
+       // once it's called , it will locate all the element
+       // specified using @FindBy annotation with locator
+       // initElements accept 2 arguments ,
+       // WebDriver instance and Page class instance (this) means current instance of this class.
+
        PageFactory.initElements(Driver.getDriver(),this);
 
    }
