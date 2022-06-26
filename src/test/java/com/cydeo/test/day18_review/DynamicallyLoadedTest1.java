@@ -28,14 +28,20 @@ public class DynamicallyLoadedTest1 {
 
 
 //5. Enter username: tomsmith
+      dynamicallyLoadedPage1.userName.sendKeys("tomsmith");
 
 
 //6. Enter password: incorrectpassword
+      dynamicallyLoadedPage1.password.sendKeys("incorrectpassword");
 
 
 //7. Click to Submit button
+     dynamicallyLoadedPage1.submitBtn.click();
 
 
 //8. Assert “Your password is invalid!” text is displayed.
+
+        Assert.assertTrue(dynamicallyLoadedPage1.errorMsg.isDisplayed());
+
     }
 }
