@@ -17,8 +17,8 @@ public class JSExecuterScrollTest {
 //        3- Use below JavaScript method and scroll
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
-        Thread.sleep(3000);
-        js.executeScript("window.scrollBy(0,750)"); // window.scrollBy(x,y)
+//        Thread.sleep(1000);
+//        js.executeScript("window.scrollBy(0,750)"); // window.scrollBy(x,y)
 
 //        Thread.sleep(3000);
 //        js.executeScript("window.scrollBy(0,750)");
@@ -35,7 +35,7 @@ public class JSExecuterScrollTest {
 //        a.  750 pixels down 10 times.
         for(int i=0; i<10; i++){
 
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             js.executeScript("window.scrollBy(0,750)"); // window.scrollBy(x,y)
 
         }
@@ -44,6 +44,12 @@ public class JSExecuterScrollTest {
 
 //                b.  750 pixels up 10 times
 
+        for(int i=0; i<10; i++){
+
+            //Thread.sleep(1000);
+            js.executeScript("window.scrollBy(0,-750)"); // window.scrollBy(x,y)
+
+        }
 
 
 
