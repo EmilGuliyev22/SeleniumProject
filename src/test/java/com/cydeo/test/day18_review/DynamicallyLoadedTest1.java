@@ -5,6 +5,7 @@ import com.cydeo.test.utilities.Driver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DynamicallyLoadedTest1 {
@@ -22,11 +23,19 @@ public class DynamicallyLoadedTest1 {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
         wait.until(ExpectedConditions.invisibilityOf(dynamicallyLoadedPage1.loadingBar));
 
-
 //4. Assert username inputbox is displayed
+        Assert.assertTrue(dynamicallyLoadedPage1.userName.isDisplayed());
+
+
 //5. Enter username: tomsmith
+
+
 //6. Enter password: incorrectpassword
+
+
 //7. Click to Submit button
+
+
 //8. Assert “Your password is invalid!” text is displayed.
     }
 }
