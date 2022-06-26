@@ -16,7 +16,6 @@ public class POM_ActionsPractices {
 
     @BeforeMethod
     public void setUpMethod(){
-
         Driver.getDriver().get("https://practice.cydeo.com/drag_and_drop_circles");
       cydeoPracticePage = new CydeoPracticePage();
       actions = new Actions(Driver.getDriver());
