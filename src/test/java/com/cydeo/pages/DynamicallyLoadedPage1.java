@@ -25,5 +25,21 @@ public class DynamicallyLoadedPage1 {
     @FindBy (xpath="//button[.='Start']")
     public WebElement startBtn;
 
+    @FindBy (id="loading")
+    public WebElement loadingBar;
+
+    @FindBy (css = "#username")
+    public WebElement userName;
+
+    @FindBy (id="pwd")
+    public WebElement password;
+
+    @FindBy (xpath ="//button[.='Submit']")
+    public WebElement submitBtn;
+
+    @FindBy (id="flash")
+    public WebElement errorMsg;
+
+
 
 }
